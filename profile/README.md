@@ -1,8 +1,9 @@
 ## GNL
 
-A durability layer for [Vercel AI SDK](https://ai-sdk.dev) agents. It wraps `generateText` and
-`streamText` and adds a journal, so a side-effecting tool call is never silently run twice — not
-after a crash, not after a retry, not when the model plans the same call again under a new id.
+**A full agent framework on the Vercel AI SDK** — runtime, HTTP server, Studio, evals, auth, RAG,
+workflows. Use all of it, or take only the durable core into the agent you already have: a
+side-effecting tool call is never silently run twice — not after a crash, not after a retry, not
+when the model plans the same call again under a new id.
 
 ```ts
 const chargeCard = gnlTool(tool({ /* your AI SDK tool */ }), {
